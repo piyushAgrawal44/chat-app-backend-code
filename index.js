@@ -13,7 +13,11 @@ app.get("/",(req, res)=>{
     res.send("server is working with perfection");
 })
 const server=http.createServer(app);
-const io=socketIO(server);
+const io=socketIO(server, {
+    cors: {
+      origin: "*",
+    }
+  });
 var users=[];
 var count=0;
 io.on("connection",(socket)=>{
