@@ -15,7 +15,7 @@ app.get("/",(req, res)=>{
 const server=http.createServer(app);
 const io=socketIO(server, {
     cors: {
-      origin: "*",
+      origin: "http://localhost:3000",
     }
   });
 var users=[];
