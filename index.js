@@ -10,7 +10,7 @@ const port= 8000 || process.env.PORT;
 
 app.use(cors());
 app.get("/",(req, res)=>{
-    res.send("server is working");
+    res.send("server is working with perfection");
 })
 const server=http.createServer(app);
 const io=socketIO(server);
@@ -56,5 +56,5 @@ io.on("connection",(socket)=>{
 
 server.listen(port,(e)=>{
     // http://localhost:8000
-    console.log("server is working");
+    console.log("server is working with perfection");
 })
